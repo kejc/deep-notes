@@ -1,3 +1,8 @@
+<?php
+print_r($_POST);
+include("./functions.php");
+include("./controller.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +18,13 @@
     </form>
 
     <ul>
-        <li>Min test note</li>
+        <!-- Her starter jeg mit loop -->
+        <?php foreach(getFromFile() as $i => $note) { ?>
+            <li>
+                <?php echo $note; ?>
+                <a href="?i=<?php echo $i; ?>">Slet</a>
+            </li>
+        <?php } ?>
     </ul>
 </body>
 </html>
