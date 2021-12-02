@@ -1,5 +1,4 @@
 <?php
-print_r($_POST);
 include("./functions.php");
 include("./controller.php");
 ?>
